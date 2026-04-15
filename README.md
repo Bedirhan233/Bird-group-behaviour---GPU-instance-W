@@ -1,16 +1,14 @@
 # Bird-group-behaviour---GPU-instance-W
 
-During my internship att Gibbet games I got a task to comelete for their game Club House on Haunted Hill. THe task was to optimize their bird group system. I even added new features to group behaviour. Where the birds could land on a spot, idle on gorund, get scared, dive, a system where birds could go to fdifferent areas based on prio number of thsoe areas.
+During my internship at Gibbet Games, I was given a task for their game Club House on Haunted Hill. The task was to optimize their bird group system. I also added new features to the group behavior, where the birds could land on a spot, idle on the ground, get scared, dive, and move to different areas based on priority values.
 
-After analyzing the existing code I decided to create my own system. The big issue with their system was that every bird had a 2d spehre box that calcualted all the time. 
-They also had a spehere around the group so every time the bird hit outside of the box it calcualted a new position.
+After analyzing the existing code, I decided to create my own system. The main issue with their system was that every bird had a 2D sphere collider that was constantly calculating. They also had a sphere around the group, so every time a bird moved outside of it, a new position was calculated.
 
-I changed the system. Instead of puting the logic inside of the bird, I made a main class for all bird movement and one for the managing. 
+I changed the system. Instead of putting the logic inside each bird, I created a main class for all bird movement and another class for managing the system.
 
-For exameple the pulsating system: 
+For example, the pulsating system:
 
-Then made a chain reaction with coroutine. First I generate a random point with a radius that starts from the center of that class and then sended the bird to that point with coroutine. When it reaches it asks for a new position through event system. 
-
+I created a chain reaction using coroutines. First, I generate a random point within a radius starting from the center of the manager. Then I send the bird to that point using a coroutine. When it reaches the destination, it requests a new position through an event system.
 
 
 ![pulsating](https://github.com/user-attachments/assets/67fa8605-49a0-4743-86b3-a348535a5af5)
